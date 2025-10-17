@@ -27,7 +27,7 @@ export default function StateGeography({
   };
 
   const getStrokeColor = () => {
-    return CICERO_COLORS.navy;
+    return CICERO_COLORS.white;
   };
 
   return (

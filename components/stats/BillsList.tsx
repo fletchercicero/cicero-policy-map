@@ -79,7 +79,7 @@ export default function BillsList({ bills, maxHeight }: BillsListProps) {
               <div className="flex items-start justify-between gap-1 sm:gap-2">
                 <div className="flex-1 min-w-0">
                   <div className="flex items-center gap-1 sm:gap-2 flex-wrap">
-                    <CardTitle className="text-sm sm:text-base font-semibold text-[#0B1F3B]">
+                    <CardTitle className="text-sm sm:text-base font-semibold text-[#172c49]">
                       {bill.number}
                     </CardTitle>
                     <span className={`text-xs sm:text-sm text-[#0E1225] opacity-75 ${
@@ -91,8 +91,8 @@ export default function BillsList({ bills, maxHeight }: BillsListProps) {
                   <CardDescription className="text-xs sm:text-sm mt-1">
                     <span className={`inline-block px-1.5 sm:px-2 py-0.5 rounded-full text-[10px] sm:text-xs font-medium ${
                       bill.status === 'Enacted' 
-                        ? 'bg-[#C5A46D] text-[#0B1F3B]' 
-                        : 'bg-[#E6E2DA] text-[#0B1F3B]'
+                        ? 'bg-[#b09c71] text-[#172c49]' 
+                        : 'bg-[#E6E2DA] text-[#172c49]'
                     }`}>
                       {bill.status}
                     </span>
@@ -101,9 +101,9 @@ export default function BillsList({ bills, maxHeight }: BillsListProps) {
                 </div>
                 <div className="flex items-center gap-2">
                   {isExpanded ? (
-                    <ChevronUp className="w-4 h-4 text-[#0B1F3B]" />
+                    <ChevronUp className="w-4 h-4 text-[#172c49]" />
                   ) : (
-                    <ChevronDown className="w-4 h-4 text-[#0B1F3B]" />
+                    <ChevronDown className="w-4 h-4 text-[#172c49]" />
                   )}
                 </div>
               </div>
@@ -112,12 +112,12 @@ export default function BillsList({ bills, maxHeight }: BillsListProps) {
               <CardContent className="pt-0">
                 <div className="space-y-2 sm:space-y-3 text-xs sm:text-sm">
                   <div>
-                    <span className="font-semibold text-[#0B1F3B]">Notes: </span>
+                    <span className="font-semibold text-[#172c49]">Notes: </span>
                     <p className="text-[#0E1225] mt-1 opacity-90">{bill.notes}</p>
                   </div>
                   {bill.stateLeg && (
                     <div>
-                      <span className="font-semibold text-[#0B1F3B]">Legislature: </span>
+                      <span className="font-semibold text-[#172c49]">Legislature: </span>
                       <span className="text-[#0E1225]">{bill.stateLeg}</span>
                     </div>
                   )}
@@ -127,7 +127,7 @@ export default function BillsList({ bills, maxHeight }: BillsListProps) {
                         href={bill.sourceLink}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-1 sm:gap-1.5 text-[#C5A46D] hover:text-[#0B1F3B] active:text-[#0B1F3B] transition-colors font-medium"
+                        className="inline-flex items-center gap-1 sm:gap-1.5 text-[#b09c71] hover:text-[#172c49] active:text-[#172c49] transition-colors font-medium"
                         onClick={(e) => e.stopPropagation()}
                       >
                         <ExternalLink className="w-3 h-3 sm:w-4 sm:h-4" />

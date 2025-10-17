@@ -3,11 +3,66 @@
 
 @custom-variant dark (&:is(.dark *));
 
+/* Custom Fonts */
+@font-face {
+  font-family: 'GT Sectra';
+  src: url('/fonts/GT Sectra/GT-Sectra-Regular.woff2') format('woff2'),
+       url('/fonts/GT Sectra/GT-Sectra-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'GT Sectra';
+  src: url('/fonts/GT Sectra/GT-Sectra-Medium.woff2') format('woff2'),
+       url('/fonts/GT Sectra/GT-Sectra-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'GT Sectra';
+  src: url('/fonts/GT Sectra/GT-Sectra-Fine-Bold.woff2') format('woff2'),
+       url('/fonts/GT Sectra/GT-Sectra-Fine-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'AlexerPro';
+  src: url('/fonts/AlexerPro/AlexerProRegular/font.woff2') format('woff2'),
+       url('/fonts/AlexerPro/AlexerProRegular/font.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'AlexerPro';
+  src: url('/fonts/AlexerPro/AlexerProMedium/font.woff2') format('woff2'),
+       url('/fonts/AlexerPro/AlexerProMedium/font.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'AlexerPro';
+  src: url('/fonts/AlexerPro/AlexerProBold/font.woff2') format('woff2'),
+       url('/fonts/AlexerPro/AlexerProBold/font.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-sans);
-  --font-serif: var(--font-serif);
+  --font-sans: 'AlexerPro', ui-sans-serif, system-ui, sans-serif;
+  --font-serif: 'GT Sectra', ui-serif, Georgia, serif;
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
@@ -45,9 +100,9 @@
 
 :root {
   /* Cicero Institute Color Scheme */
-  --cicero-navy: #0B1F3B;
-  --cicero-gold: #C5A46D;
-  --cicero-light: #F8F6F2;
+  --cicero-navy: #172c49;
+  --cicero-gold: #b09c71;
+  --cicero-light: #FFFFFF;
   --cicero-gray: #E6E2DA;
   --cicero-slate: #0E1225;
   
@@ -59,11 +114,11 @@
   --popover-foreground: oklch(0.145 0 0);
   --primary: oklch(0.205 0 0);
   --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.97 0 0);
+  --secondary: oklch(1 0 0);
   --secondary-foreground: oklch(0.205 0 0);
-  --muted: oklch(0.97 0 0);
+  --muted: oklch(1 0 0);
   --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.97 0 0);
+  --accent: oklch(1 0 0);
   --accent-foreground: oklch(0.205 0 0);
   --destructive: oklch(0.577 0.245 27.325);
   --border: oklch(0.922 0 0);
@@ -74,11 +129,11 @@
   --chart-3: oklch(0.398 0.07 227.392);
   --chart-4: oklch(0.828 0.189 84.429);
   --chart-5: oklch(0.769 0.188 70.08);
-  --sidebar: oklch(0.985 0 0);
+  --sidebar: oklch(1 0 0);
   --sidebar-foreground: oklch(0.145 0 0);
   --sidebar-primary: oklch(0.205 0 0);
   --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.97 0 0);
+  --sidebar-accent: oklch(1 0 0);
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
@@ -124,8 +179,11 @@
   * {
     @apply border-border outline-ring/50;
   }
+  html {
+    @apply bg-white;
+  }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-white text-foreground;
   }
   
   /* Cicero branding styles */

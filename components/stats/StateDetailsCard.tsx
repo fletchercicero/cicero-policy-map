@@ -20,11 +20,11 @@ export default function StateDetailsCard({
   return (
     <div className="h-full flex flex-col bg-white rounded-lg shadow-lg overflow-hidden border border-[#E6E2DA]">
       {/* Header */}
-      <div className="bg-[#C5A46D] text-[#0B1F3B] p-4 sm:p-6">
+      <div className="bg-[#b09c71] text-[#172c49] p-4 sm:p-6">
         <Button
           variant="ghost"
           onClick={onBack}
-          className="text-[#0B1F3B] hover:bg-[#0B1F3B]/10 mb-3 sm:mb-4 -ml-2 text-sm sm:text-base"
+          className="text-[#172c49] hover:bg-[#172c49]/10 mb-3 sm:mb-4 -ml-2 text-sm sm:text-base"
         >
           <ArrowLeft className="w-4 h-4 mr-2" />
           Back to Map
@@ -45,18 +45,18 @@ export default function StateDetailsCard({
         <div className="border-b border-[#E6E2DA] bg-white">
           <button
             onClick={() => setShowCategories(!showCategories)}
-            className="w-full px-6 py-4 flex items-center justify-between hover:bg-[#F8F6F2] transition-colors"
+            className="w-full px-6 py-4 flex items-center justify-between hover:bg-[#E6E2DA]/30 transition-colors"
           >
             <div className="flex items-center gap-2">
-              <h3 className="text-sm font-semibold text-[#0B1F3B]">Issue Categories</h3>
+              <h3 className="text-sm font-semibold text-[#172c49]">Issue Categories</h3>
               <span className="text-xs text-[#0E1225] opacity-75">
                 ({stateData.issueCategories.length})
               </span>
             </div>
             {showCategories ? (
-              <ChevronUp className="w-4 h-4 text-[#0B1F3B]" />
+              <ChevronUp className="w-4 h-4 text-[#172c49]" />
             ) : (
-              <ChevronDown className="w-4 h-4 text-[#0B1F3B]" />
+              <ChevronDown className="w-4 h-4 text-[#172c49]" />
             )}
           </button>
           {showCategories && (
@@ -65,7 +65,7 @@ export default function StateDetailsCard({
                 {stateData.issueCategories.map((category, index) => (
                   <span
                     key={index}
-                    className="px-3 py-1 bg-[#C5A46D] text-[#0B1F3B] text-xs rounded-full font-medium"
+                    className="px-3 py-1 bg-[#b09c71] text-[#172c49] text-xs rounded-full font-medium"
                   >
                     {category}
                   </span>
@@ -78,7 +78,7 @@ export default function StateDetailsCard({
 
       {/* Bills List */}
       <div className="flex-1 flex flex-col p-3 sm:p-4 md:p-6 min-h-0">
-        <h3 className="text-base sm:text-lg font-serif font-semibold text-[#0B1F3B] mb-3 sm:mb-4 flex-shrink-0">
+        <h3 className="text-base sm:text-lg font-serif font-semibold text-[#172c49] mb-3 sm:mb-4 flex-shrink-0">
           Policy Bills
         </h3>
         <div className="flex-1 min-h-0">

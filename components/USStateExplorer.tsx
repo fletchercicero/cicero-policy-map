@@ -137,17 +137,9 @@ export default function USStateExplorer({ bills }: USStateExplorerProps) {
   };
 
   return (
-    <div className="w-full min-h-screen bg-[#F8F6F2] p-2 sm:p-4 md:p-6">
+    <div className="w-full min-h-screen bg-white p-2 sm:p-4 md:p-6">
       <div className="max-w-7xl mx-auto h-full">
-        {/* Header */}
-        <header className="mb-4 md:mb-6">
-          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-[#0B1F3B] mb-2">
-            Cicero Institute Policy Map
-          </h1>
-          <p className="text-[#0E1225] text-sm sm:text-base md:text-lg">
-            Explore policy bills enacted or sent to governors across the United States
-          </p>
-        </header>
+
 
         {/* Main Content */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-6 h-auto lg:h-[calc(100vh-180px)]">

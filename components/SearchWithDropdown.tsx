@@ -100,7 +100,7 @@ export default function SearchWithDropdown({
 
   return (
     <div className={`relative ${className}`}>
-      <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-[#0B1F3B] opacity-50 w-4 h-4 sm:w-5 sm:h-5 pointer-events-none z-10" />
+      <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-[#172c49] opacity-50 w-4 h-4 sm:w-5 sm:h-5 pointer-events-none z-10" />
       <Input
         ref={inputRef}
         type="text"
@@ -125,13 +125,13 @@ export default function SearchWithDropdown({
             <button
               key={stateName}
               onClick={() => handleSelectState(stateName)}
-              className={`w-full text-left px-4 py-2.5 text-sm hover:bg-[#F8F6F2] transition-colors ${
-                index === highlightedIndex ? 'bg-[#F8F6F2]' : ''
+              className={`w-full text-left px-4 py-2.5 text-sm hover:bg-[#E6E2DA]/30 transition-colors ${
+                index === highlightedIndex ? 'bg-[#E6E2DA]/30' : ''
               } ${index === 0 ? 'rounded-t-lg' : ''} ${
                 index === filteredStates.length - 1 ? 'rounded-b-lg' : ''
               }`}
             >
-              <span className="text-[#0B1F3B] font-medium">{stateName}</span>
+              <span className="text-[#172c49] font-medium">{stateName}</span>
             </button>
           ))}
         </div>

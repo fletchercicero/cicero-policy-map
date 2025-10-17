@@ -1,31 +1,31 @@
 // Cicero Institute Color Scheme
 export const CICERO_COLORS = {
   // Primary brand colors
-  navy: '#0B1F3B',         // Page text, headings, borders, stroke
-  gold: '#C5A46D',         // Selected state, hover, primary buttons
-  light: '#F8F6F2',        // App background
+  navy: '#172c49',         // Page text, headings, borders, stroke
+  gold: '#b09c71',         // Selected state, hover, primary buttons
+  light: '#FFFFFF',        // App background
   gray: '#E6E2DA',         // Card borders, dimmed states
   slate: '#0E1225',        // Secondary/base text color
   white: '#FFFFFF',        // Card backgrounds
   
   // State fill colors
-  stateDefault: '#D7E0EA', // Default enabled state fill at rest
+  stateDefault: '#2e5d8c', // Default enabled state fill at rest
   stateHover: '#E9D9B8',   // Hover fill for enabled states
-  stateDisabled: '#EDEBE7', // Disabled/non-clickable state fill
-  stateSelected: '#C5A46D', // Selected state (gold)
+  stateDisabled: '#d8d8d6', // Disabled/non-clickable state fill
+  stateSelected: '#b09c71', // Selected state (gold)
   stateDimmed: '#E6E2DA',  // Dimmed state when filtered
   
   // Legacy aliases for compatibility
-  primary: '#0B1F3B',
-  accent: '#C5A46D',
-  background: '#F8F6F2',
-  text: '#0B1F3B',
+  primary: '#172c49',
+  accent: '#b09c71',
+  background: '#FFFFFF',
+  text: '#172c49',
   
   // State colors (mapped to new scheme)
-  enabled: '#D7E0EA',
-  disabled: '#EDEBE7',
+  enabled: '#2e5d8c',
+  disabled: '#d8d8d6',
   hover: '#E9D9B8',
-  selected: '#C5A46D',
+  selected: '#b09c71',
 };
 
 // TopoJSON URL for US states

@@ -33,7 +33,7 @@ export default function MapControls({
         variant="outline"
         size="icon"
         onClick={onReset}
-        className="flex-shrink-0 border-[#0B1F3B] text-[#0B1F3B] hover:bg-[#C5A46D] hover:text-[#0B1F3B]"
+        className="flex-shrink-0 border-[#172c49] text-[#172c49] hover:bg-[#b09c71] hover:text-[#172c49]"
         title="Reset view"
       >
         <RotateCcw className="w-4 h-4" />

@@ -28,7 +28,7 @@ export default function USMap({
   onGeographiesLoad,
 }: USMapProps) {
   return (
-    <div className="w-full h-full bg-[#F8F6F2] rounded-lg shadow-lg overflow-hidden border border-[#E6E2DA]">
+    <div className="w-full h-full bg-white rounded-lg shadow-lg overflow-hidden border border-[#E6E2DA]">
       <ComposableMap
         projection="geoAlbersUsa"
         projectionConfig={{
