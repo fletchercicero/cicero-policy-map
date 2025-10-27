@@ -2,7 +2,7 @@
 
 import { useState, useRef, useEffect } from 'react';
 import { Bill } from '@/types';
-import { ExternalLink, ChevronDown, ChevronUp } from 'lucide-react';
+import { ChevronDown, ChevronUp } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 
 interface BillsListProps {
@@ -78,16 +78,11 @@ export default function BillsList({ bills, maxHeight }: BillsListProps) {
             <CardHeader className="pb-2 sm:pb-3">
               <div className="flex items-start justify-between gap-1 sm:gap-2">
                 <div className="flex-1 min-w-0">
-                  <div className="flex items-center gap-1 sm:gap-2 flex-wrap">
-                    <CardTitle className="text-sm sm:text-base font-semibold text-[#172c49]">
-                      {bill.number}
-                    </CardTitle>
-                    <span className={`text-xs sm:text-sm text-[#0E1225] opacity-75 ${
-                      !isExpanded && !hasExpandedBills ? 'line-clamp-2' : ''
-                    }`}>
-                      {bill.issues}
-                    </span>
-                  </div>
+                  <CardTitle className={`text-sm sm:text-base font-semibold text-[#172c49] ${
+                    !isExpanded && !hasExpandedBills ? 'line-clamp-2' : ''
+                  }`}>
+                    {bill.issues}
+                  </CardTitle>
                   <CardDescription className="text-xs sm:text-sm mt-1">
                     <span className={`inline-block px-1.5 sm:px-2 py-0.5 rounded-full text-[10px] sm:text-xs font-medium ${
                       bill.status === 'Enacted' 
@@ -119,20 +114,6 @@ export default function BillsList({ bills, maxHeight }: BillsListProps) {
                     <div>
                       <span className="font-semibold text-[#172c49]">Legislature: </span>
                       <span className="text-[#0E1225]">{bill.stateLeg}</span>
-                    </div>
-                  )}
-                  {bill.sourceLink && (
-                    <div>
-                      <a
-                        href={bill.sourceLink}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-1 sm:gap-1.5 text-[#b09c71] hover:text-[#172c49] active:text-[#172c49] transition-colors font-medium"
-                        onClick={(e) => e.stopPropagation()}
-                      >
-                        <ExternalLink className="w-3 h-3 sm:w-4 sm:h-4" />
-                        <span className="text-xs sm:text-sm">View Bill Source</span>
-                      </a>
                     </div>
                   )}
                 </div>
